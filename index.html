@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff4e6">
+<meta name="description" content="小木学习，给五年级的学习小屋：作文、数学PK、解谜。">
+<title>小木学习 · 五年级</title>
+<link rel="icon" href="favicon.ico">
+<style>
+:root{
+  --ink:#3e2a4a;
+  --ink2:#7a6888;
+  --card:#fffdfb;
+  --shadow:0 10px 24px rgba(90,50,70,.10);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;max-width:100%;overflow-x:hidden}
+html,body{height:100%}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC",sans-serif;
+  color:var(--ink);
+  background:linear-gradient(165deg,#fff6ea 0%,#ffe8f2 46%,#e7f3ff 100%) fixed;
+}
+button,a{font-family:inherit;color:inherit}
+h1,h2,p{margin:0}
+.home{
+  min-height:100%;
+  min-height:100dvh;
+  padding:28px 16px 36px;
+  padding-bottom:calc(36px + env(safe-area-inset-bottom));
+}
+.inner{max-width:1080px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+.mark{
+  width:72px;height:72px;flex:none;border-radius:22px;
+  background:linear-gradient(160deg,#fff,#ffe7c2);
+  box-shadow:var(--shadow);
+  display:grid;place-items:center;font-size:40px;line-height:1;
+}
+h1{font-size:40px;line-height:1.15;letter-spacing:.02em}
+.lead{font-size:20px;line-height:1.45;font-weight:700;margin-top:2px}
+.note{color:var(--ink2);font-size:16px;line-height:1.55;margin:10px 0 22px;max-width:40em}
+.grid{display:grid;grid-template-columns:1fr;gap:14px}
+.card{
+  display:flex;align-items:center;gap:14px;
+  min-height:128px;padding:18px 18px;
+  background:var(--card);border-radius:24px;box-shadow:var(--shadow);
+  text-decoration:none;border:3px solid transparent;
+}
+.card:active{transform:scale(.99)}
+.card:focus-visible{outline:3px solid #7464f0;outline-offset:3px}
+.emoji{
+  width:76px;height:76px;flex:none;border-radius:22px;
+  display:grid;place-items:center;font-size:40px;line-height:1;
+}
+.c1 .emoji{background:#ffe4ee}
+.c2 .emoji{background:#ece6ff}
+.c3 .emoji{background:#fff1cc}
+.c1{border-color:#ffd0e0}
+.c2{border-color:#ddd4ff}
+.c3{border-color:#ffe3a8}
+.kicker{font-size:15px;font-weight:800;letter-spacing:.08em}
+.c1 .kicker{color:#e25586}
+.c2 .kicker{color:#6d52e0}
+.c3 .kicker{color:#d4890a}
+.card h2{font-size:28px;line-height:1.2;margin:2px 0 4px}
+.card p{font-size:16px;line-height:1.45;color:var(--ink2)}
+.go{
+  margin-left:auto;flex:none;
+  min-width:72px;min-height:48px;padding:0 14px;
+  border-radius:999px;font-size:18px;font-weight:800;
+  display:grid;place-items:center;color:#fff;
+}
+.c1 .go{background:#ff6d9a}
+.c2 .go{background:#7464f0}
+.c3 .go{background:#e8960a}
+.shell{
+  position:fixed;inset:0;z-index:2;
+  display:flex;flex-direction:column;
+  background:#fff6ea;
+  padding-top:env(safe-area-inset-top);
+}
+.bar{
+  flex:none;height:56px;
+  display:flex;align-items:center;gap:10px;
+  padding:6px 10px;
+  background:rgba(255,253,251,.96);
+  border-bottom:1px solid #f0e2d2;
+}
+#back{
+  min-width:96px;min-height:44px;padding:0 16px;
+  border:0;border-radius:999px;cursor:pointer;
+  background:#3e2a4a;color:#fff;font-size:18px;font-weight:800;
+  touch-action:manipulation;
+}
+#back:focus-visible{outline:3px solid #7464f0;outline-offset:2px}
+#appname{font-size:18px;font-weight:800}
+iframe{flex:1;width:100%;border:0;background:#fff;display:block}
+[hidden]{display:none !important}
+@media (min-width:800px){
+  .home{padding:48px 28px 48px}
+  h1{font-size:52px}
+  .lead{font-size:22px}
+  .grid{grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+  .card{flex-direction:column;align-items:flex-start;min-height:280px;padding:22px}
+  .card h2{font-size:32px}
+  .go{margin-left:0;margin-top:auto}
+}
+</style>
+</head>
+<body>
+<main class="home" id="home">
+  <div class="inner">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">🌳</div>
+      <div>
+        <h1>小木学习</h1>
+        <p class="lead">给五年级的学习小屋</p>
+      </div>
+    </div>
+    <p class="note">作文、数学PK、解谜，都在这一页。点一张卡片就能开始，不用联网。写过的内容和成绩留在这台设备里。</p>
+    <div class="grid">
+      <a class="card c1" href="#yuwen" data-app="yuwen">
+        <div class="emoji" aria-hidden="true">✏️</div>
+        <div>
+          <div class="kicker">语文</div>
+          <h2>作文小作坊</h2>
+          <p>审题、列提纲、分段写，写完自己查一查。</p>
+        </div>
+        <span class="go">进入</span>
+      </a>
+      <a class="card c2" href="#shuxue" data-app="shuxue">
+        <div class="emoji" aria-hidden="true">🔢</div>
+        <div>
+          <div class="kicker">数学</div>
+          <h2>数学PK</h2>
+          <p>和 Miuya 比一比，还有思路训练、每日逻辑。</p>
+        </div>
+        <span class="go">进入</span>
+      </a>
+      <a class="card c3" href="#yizhi" data-app="yizhi">
+        <div class="emoji" aria-hidden="true">🔑</div>
+        <div>
+          <div class="kicker">益智</div>
+          <h2>解谜大冒险</h2>
+          <p>密室、侦探、推箱子、华容道、火柴和一笔画。</p>
+        </div>
+        <span class="go">进入</span>
+      </a>
+    </div>
+  </div>
+</main>
+<div class="shell" id="shell" hidden>
+  <div class="bar">
+    <button type="button" id="back">首页</button>
+    <div id="appname"></div>
+  </div>
+  <iframe id="frame" title="学习内容"></iframe>
+</div>
+<script>
+(function(){
+  var APPS = {
+    yuwen: {src:'yuwen/index.html', name:'语文 · 作文小作坊'},
+    shuxue: {src:'shuxue/index.html', name:'数学 · 数学PK'},
+    yizhi: {src:'yizhi/index.html', name:'益智 · 解谜大冒险'}
+  };
+  var home = document.getElementById('home');
+  var shell = document.getElementById('shell');
+  var frame = document.getElementById('frame');
+  var appname = document.getElementById('appname');
+  var current = '';
+  function show(id){
+    var app = APPS[id];
+    if(!app){
+      shell.hidden = true;
+      home.hidden = false;
+      document.body.style.overflow = '';
+      appname.textContent = '';
+      if(current){ frame.src = 'about:blank'; current = ''; }
+      document.title = '小木学习 · 五年级';
+      return;
+    }
+    home.hidden = true;
+    shell.hidden = false;
+    document.body.style.overflow = 'hidden';
+    appname.textContent = app.name;
+    document.title = '小木学习 · ' + app.name;
+    frame.title = app.name;
+    if(current !== app.src){ frame.src = app.src; current = app.src; }
+  }
+  function idFromHash(){
+    var id = (location.hash || '').replace(/^#/, '');
+    return APPS[id] ? id : '';
+  }
+  window.addEventListener('hashchange', function(){ show(idFromHash()); });
+  document.getElementById('back').addEventListener('click', function(){
+    if(location.hash) location.hash = '';
+    else show('');
+  });
+  show(idFromHash());
+})();
+</script>
+</body>
+</html>
